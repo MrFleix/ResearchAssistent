@@ -1,0 +1,16 @@
+.typing-bubble {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 16px;
+    min-height: 44px;
+  }
+  
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    animation: pulse-dot 1.2s ease-in-out infinite;
+    display: inline-block;
+  }
