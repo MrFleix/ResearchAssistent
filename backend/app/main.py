@@ -7,9 +7,9 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from agents.graph import run_chat_workflow
-from models.async_local_llm import AsyncLocalLLM
-
+from backend.app.agents.graph import run_chat_workflow
+from backend.app.models.async_local_llm import AsyncLocalLLM
+from backend.app.models.llm_provider import LLMProvider
 load_dotenv()
 
 
@@ -20,10 +20,9 @@ class ChatRequest(BaseModel):
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.llm = AsyncLocalLLM(model_name=os.getenv("LLM_MODEL", "Qwen/Qwen3-0.6B"))
+    app.state.llm = LLMProvider()  # ← kümmert sich selbst um mode
     app.state.apify_key = os.getenv("APIFY_KEY")
     yield
-
 
 app = FastAPI(lifespan=lifespan)
 

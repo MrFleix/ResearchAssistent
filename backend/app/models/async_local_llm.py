@@ -1,7 +1,7 @@
 # app/models/async_local_llm.py
 import asyncio
 from functools import lru_cache
-from models.local_model import LocalLLM
+from backend.app.models.local_model import LocalLLM
 
 
 @lru_cache(maxsize=1)

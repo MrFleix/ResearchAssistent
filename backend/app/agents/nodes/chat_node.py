@@ -1,7 +1,7 @@
 # agents/nodes/chat_node.py
 from typing import ClassVar, Dict, Any
 from pydantic import field_validator
-from agents.state import BaseNodeOutput
+from backend.app.agents.state import BaseNodeOutput
 
 
 class ChatNode:

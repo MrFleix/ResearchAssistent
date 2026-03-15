@@ -1,8 +1,7 @@
 # agents/graph.py
 from langgraph.graph import StateGraph, END
-from agents.nodes.chat_node import ChatNode
-from agents.state import WorkflowState
-
+from backend.app.agents.nodes.chat_node import ChatNode
+from backend.app.agents.state import WorkflowState
 
 def build_graph(llm_client=None):
     graph = StateGraph(WorkflowState)
