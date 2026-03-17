@@ -1,6 +1,10 @@
-import os
+# config.py
 
-class Config:
-    API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-    SCRAPER_ENDPOINT = ""
-    LOCAL_MODE = True  # True = dummy data, False = call API
+import os
+from dotenv import load_dotenv
+
+# lädt automatisch .env
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4.1-mini")
