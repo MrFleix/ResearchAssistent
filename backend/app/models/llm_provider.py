@@ -5,7 +5,7 @@ from backend.app.models.api_model import LLMClient   # deine API Klasse
 class LLMProvider:
 
     def __init__(self):
-        mode = os.getenv("LLM_MODE", "local")
+        mode = os.getenv("LLM_MODE", "api")
 
         if mode == "api":
             print("Use API LLM")

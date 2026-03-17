@@ -51,7 +51,7 @@ Extensible: new sources (HuggingFace, Reddit) can plug into ingest_workflow
 uvicorn backend.app.main:app --reload
 -Frontend  cd frontend npm run dev
 -Backend cd backend/app uvicorn main:app --port 8000
-
+uvicorn backend.app.main:app --port 8000
 ## Tech Stack
 
 - **Backend:** FastAPI, Python  

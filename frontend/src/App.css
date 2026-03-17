@@ -102,3 +102,71 @@
   
   .send-btn:hover:not(:disabled) { opacity: 0.85; transform: scale(1.04); }
   .send-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+
+
+
+
+  .reasoning-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .reasoning-toggle input {
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+  
+  .reasoning-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .reasoning-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .reasoning-label {
+    color: var(--text-muted);
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  
+  .reasoning-value {
+    color: var(--text);
+  }
+  
+  .reasoning-badge {
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+  }
+  
+  .reasoning-badge.low    { background: #1a3a1a; color: #4caf50; }
+  .reasoning-badge.medium { background: #3a2e1a; color: #ff9800; }
+  .reasoning-badge.high   { background: #3a1a1a; color: #f44336; }
+  
+  .reasoning-list {
+    margin: 0;
+    padding-left: 14px;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }

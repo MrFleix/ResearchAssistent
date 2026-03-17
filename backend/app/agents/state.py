@@ -20,8 +20,12 @@ class BaseWorkflowState(TypedDict):
     output:       Dict[str, Any]
  
  
-class WorkflowState(BaseWorkflowState):
+class WorkflowState(BaseModel):
+    user_id: str
     message: str
+    thinking_summary: str = ""
+    reasoning_budget_tokens: int = 8000
+    node_results: List[Dict[str, Any]] = []
  
  
 class IngestState(BaseWorkflowState):
